@@ -2,11 +2,11 @@
 * {
 	padding: 0;
 	margin: 0;
-	font-family: 'Cutive Mono', monospace;
 }
 
 body {
 	padding-bottom: 500px;
+	font-family: 'Cutive Mono', monospace;
 }
 
 h2 {
@@ -78,6 +78,7 @@ h2 {
 
 .reference-input p {
 	margin-left: 4px;
+	font-family: Verdana;
 }
 
 .form-control input[type='text'] {
