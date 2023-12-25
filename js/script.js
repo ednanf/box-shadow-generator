@@ -30,35 +30,43 @@ class BoxShadowGenerator {
 	initialize() {
 		this.horizontalRef.value = this.horizontal.value;
 		this.verticalRef.value = this.vertical.value;
-		this.spreadRef.value = this.spread.value;
 		this.blurRef.value = this.blur.value;
+		this.spreadRef.value = this.spread.value;
 
-		this.applyRules();
+		this.applyRule();
 		this.showRule();
 	}
 
-	applyRules() {
-		this.previewBox.style.boxShadow = `${this.horizontalRef.value}px ${this.verticalRef.value}px ${this.blurRef.value}px ${this.spreadRef.value}px #000000`;
+	// Applies the rules to the document
+	applyRule() {
+		this.previewBox.style.boxShadow = `${this.horizontalRef.value}px ${this.verticalRef.value}px ${this.blur.value}px ${this.spread.value}px #000000`;
 		this.currentRule = this.previewBox.style.boxShadow;
 	}
 
+	// Shows the rules in the copy area
 	showRule() {
 		this.rule.innerText = this.currentRule;
 		this.webkitRule.innerText = this.currentRule;
 		this.mozRule.innerText = this.currentRule;
+	}
+
+	updateValue(type, value) {
+		switch (type) {
+			case 'horizontal':
+				this.horizontalRef.value = value;
+		}
+		this.applyRule();
+		this.showRule();
 	}
 }
 
 // Elements
 const horizontal = document.querySelector('#horizontal');
 const horizontalRef = document.querySelector('#horizontal-value');
-
 const vertical = document.querySelector('#vertical');
 const verticalRef = document.querySelector('#vertical-value');
-
 const blur = document.querySelector('#blur');
 const blurRef = document.querySelector('#blur-value');
-
 const spread = document.querySelector('#spread');
 const spreadRef = document.querySelector('#spread-value');
 
@@ -86,3 +94,7 @@ const boxShadow = new BoxShadowGenerator(
 boxShadow.initialize();
 
 // Events
+horizontal.addEventListener('input', (e) => {
+	const value = e.target.value;
+	boxShadow.updateValue('horizontal', value);
+});
