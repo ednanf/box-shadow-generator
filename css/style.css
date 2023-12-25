@@ -1,0 +1,114 @@
+/* General */
+* {
+	padding: 0;
+	margin: 0;
+	font-family: 'Cutive Mono', monospace;
+}
+
+body {
+	padding-bottom: 500px;
+}
+
+h2 {
+	margin-bottom: 1.6rem;
+	text-align: center;
+	color: #333;
+}
+
+#box-shadow-generator {
+	display: flex;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+#controls-container,
+#preview {
+	flex: 1;
+	padding: 2rem;
+}
+
+/* Controls */
+.form-control {
+	display: flex;
+	padding-bottom: 1.2rem;
+	margin-bottom: 1.2rem;
+	border-bottom: 1px dashed #ccc;
+}
+
+.form-control label {
+	font-weight: bold;
+	margin: 1rem;
+	color: #555;
+}
+
+.range-input {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+}
+
+.range-input label {
+	font-size: 20px;
+}
+
+.range-input input[type='range'] {
+	appearance: none;
+	-webkit-appearance: none;
+	width: 100%;
+	height: 24px;
+	background-color: #eeeeee;
+	border-radius: 50px;
+	outline: none;
+}
+
+.range-input input[type='range']::-webkit-slider-thumb {
+	appearance: none;
+	-webkit-appearance: none;
+	width: 30px;
+	height: 30px;
+	background-color: #e9d60a;
+	border-radius: 100px;
+	cursor: pointer;
+}
+
+.reference-input {
+	display: flex;
+	align-items: center;
+}
+
+.reference-input p {
+	margin-left: 4px;
+}
+
+.form-control input[type='text'] {
+	height: 40px;
+	width: 40px;
+	margin-left: 1.5rem;
+	text-align: center;
+	font-size: 20px;
+}
+
+/* Preview */
+#box {
+	width: 100%;
+	height: 300px;
+	background-color: #e9d60a;
+}
+
+/* Generation area */
+#generated-rule {
+	text-align: center;
+	font-family: 'Cutive Mono';
+}
+
+#generated-rule p {
+	margin-bottom: 0.5rem;
+}
+
+#rules-area {
+	background-color: #eeeeee;
+	max-width: 1000px;
+	margin: 0 auto;
+	border: 2px solid #e9d60a;
+	padding: 1rem;
+}
