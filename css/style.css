@@ -152,6 +152,10 @@ h2 {
 	color: cornflowerblue;
 }
 
+#copy-prompt {
+	margin-top: 1rem;
+}
+
 /* <<<<<<<<<<<<<<<<<<<< Mobile >>>>>>>>>>>>>>>>>>>> */
 @media (max-width: 425px) {
 	#box-shadow-generator {

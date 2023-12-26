@@ -194,3 +194,18 @@ inset.addEventListener('input', (e) => {
 
 	boxShadow.updateValue('inset', value);
 });
+
+// Copy rules
+const rulesArea = document.querySelector('#rules-area');
+const copyPrompt = document.querySelector('#copy-prompt');
+
+rulesArea.addEventListener('click', () => {
+	const rules = rulesArea.innerText.replace(/^\s*\n/gm, ''); // removes added lines between each rule
+	navigator.clipboard.writeText(rules).then(() => {
+		copyPrompt.innerText = 'Copied!';
+
+		setTimeout(() => {
+			copyPrompt.innerText = 'Click to copy';
+		}, 2000);
+	});
+});
