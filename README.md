@@ -2,8 +2,7 @@
 
 ## Live Demo
 
-[Access it here!](https://ednanf.github.io/JS-Box-Shadow-Generator/)
-
+[Access it here!](https://ednanf.github.io/box-shadow-generator/)
 ## About
 
 This is a tool that generates box-shadow CSS code.
